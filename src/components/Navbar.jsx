@@ -43,6 +43,30 @@ const centerVariants ={
     }
   }
 
+  const listVariants={
+    closed:{
+      x:"100vw"
+    },
+    opened:{
+      x: 0,
+      transition:{
+        when:"beforeChildren",
+        staggerChildren: 0.2,
+      }
+    }
+  }
+
+  const listItemVariants={
+    closed:{
+      x: -10,
+      opacity:0
+    },
+    opened:{
+      x:0,
+      opacity: 1
+    }
+  }
+
   return (
     <div className="h-full items-center justify-between flex px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 text-base">
       
@@ -75,22 +99,27 @@ const centerVariants ={
           <img src="/whatsapp.png" alt="whatsapp" width={32} height={32} />
           </Link>
     </div>
+
       {/* menu for small screens */}
       <div className="md:hidden">
         {/* menu button */}
       <button className="w-10 h-8 flex flex-col justify-between z-50 relative" onClick={(() => setOpen(!open))}>
-        <motion.div variants={topVariants} className="w-10 h-1 bg-black rounded"></motion.div>
-        <motion.div variants={centerVariants} className="w-10 h-1 bg-black rounded"></motion.div>
-        <motion.div variants={bottomVariants} className="w-10 h-1 bg-black rounded"></motion.div>
+        <motion.div variants={topVariants} animate={open ? "opened" : "closed"} className="w-10 h-1 bg-black rounded origin-left"></motion.div>
+        <motion.div variants={centerVariants} animate={open ? "opened" : "closed"} className="w-10 h-1 bg-black rounded"></motion.div>
+        <motion.div variants={bottomVariants} animate={open ? "opened" : "closed"} className="w-10 h-1 bg-black rounded origin-left"></motion.div>
         </button>
+
         {/* menu list */}
-        {open && (<div className="absolute top-0 left-0 w-screen h-screen bg-slate-700 text-white flex items-center justify-center gap-8 flex-col text-4xl">
+        {open && (<motion.div variants={listVariants} initial="closed" animate="opened" className="absolute z-40 top-0 left-0 w-screen h-screen bg-slate-700 text-white flex items-center justify-center gap-8 flex-col text-4xl">
+          
           {links.map( link => (
-          <Link href={link.url}>{link.title}</Link>
+            <motion.div variants={listItemVariants} key={link.title}><Link href={link.url}>{link.title}</Link>
+            </motion.div>
+
           ))}
-        </div>)}
+        </motion.div>
+         )}
       </div>
-      
     </div>
   )
 }
