@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .unique-stlye{
+    background-image: linear-gradient(to bottom right, #24539b, #485c58);
+    width: 100%;
+    height: 100%;
+} */
