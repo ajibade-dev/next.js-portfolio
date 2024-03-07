@@ -2,6 +2,7 @@
 import { motion, useScroll, useInView } from "framer-motion"
 import Brain from "../../components/Brain"
 import { useRef } from "react"
+import { transcode } from "buffer"
 
 
 const AboutPage = () => {
@@ -21,7 +22,7 @@ const AboutPage = () => {
     <motion.div className="h-full " initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}}>
       
       {/*main container */}
-       <div className="h-full overflow-scroll lg:flex">
+       <div className="h-full overflow-scroll lg:flex relative">
         {/* text container */}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-40 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* biography container */}
@@ -69,11 +70,12 @@ const AboutPage = () => {
             {/* svg on the other side */}
           </div>
           {/* skills container */}
-          <div className="flex flex-col gap-12 justify-center">
+          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
             {/* skill title */}
-          <h1 className="font-bold text-2xl">SKILLS</h1>
+          <motion.h1 initial={{x:"-300px"}} animate={isSkillRefInView ? {x:0} : {}} transition={{ delay: 0.4}} className="font-bold text-2xl">SKILLS</motion.h1>
+
           {/* skill list */}
-          <div className="flex gap-4 flex-wrap">
+          <motion.div initial={{x:"-300px"}} animate={isSkillRefInView ? {x:0} : {}} transition={{ delay: 0.2}} className="flex gap-4 flex-wrap">
             <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Javascript</div>
             <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Typescript</div>
             <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Tailwind CSS</div>
@@ -82,7 +84,7 @@ const AboutPage = () => {
             <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">React.js</div>
             <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Redux toolkit</div>
             <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Three.js</div>
-          </div>
+          </motion.div>
         {/*  skill scroll svg */}
         <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
@@ -108,11 +110,13 @@ const AboutPage = () => {
             </motion.svg>
           </div>
           {/* experience container */}
-          <div className="flex flex-col gap-12 justify-center pb-48">
+          <div className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
             {/* experience title */}
-          <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+          <motion.h1 initial={{x: "-300px"}} animate={isExperienceRefInView ? {x:'0'} : {}} transition={{delay: 0.2}} className="font-bold text-2xl">EXPERIENCE</motion.h1>
           {/* experience list */}
-          <div className="">
+          <motion.div
+          initial={{x: "-300px"}} animate={isExperienceRefInView ? {x:'0'} : {}} transition={{delay: 0.2}}
+          className="">
 
             {/* the first one */}
             {/* experience list item */}
@@ -193,7 +197,7 @@ const AboutPage = () => {
               {/* right */}
               <div className="w-1/3"></div>
             </div>
-          </div>
+          </motion.div>
           </div>
         </div>
         {/* svg container */}
