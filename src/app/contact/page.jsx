@@ -10,29 +10,15 @@ const ContactPage = () => {
 
 const text = "Say Hello to Paul"
 
-  const form = useRef(null);
+  const form = useRef();
 
-  // const checkEmptyFields = () => {
-  //   const messageInput = form.current.querySelector('input[name="user_message"]');
-  //   const emailInput = form.current.querySelector('input[name="user_email"]');
-
-  //   if (!messageInput.value.trim() || !emailInput.value.trim()) {
-  //     setError(true);
-  //   } else {
-  //     setError(false);
-  //   }
-  // };
+ 
 
   const sendEmail = (e) => {
     e.preventDefault();
     setError(false);
     setSuccess(false)
 
-    checkEmptyFields();
-
-    // if (error) {
-    //   setError(true);
-    // }
     
     emailjs
       .sendForm(
