@@ -10,13 +10,30 @@ const ContactPage = () => {
 
 const text = "Say Hello to Paul"
 
-  const form = useRef();
+  const form = useRef(null);
+
+  // const checkEmptyFields = () => {
+  //   const messageInput = form.current.querySelector('input[name="user_message"]');
+  //   const emailInput = form.current.querySelector('input[name="user_email"]');
+
+  //   if (!messageInput.value.trim() || !emailInput.value.trim()) {
+  //     setError(true);
+  //   } else {
+  //     setError(false);
+  //   }
+  // };
 
   const sendEmail = (e) => {
     e.preventDefault();
     setError(false);
     setSuccess(false)
 
+    checkEmptyFields();
+
+    // if (error) {
+    //   setError(true);
+    // }
+    
     emailjs
       .sendForm(
         // process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -56,15 +73,17 @@ const text = "Say Hello to Paul"
         {/* form container */}
         <form
         onSubmit={sendEmail}
-        ref={form} className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24">
+        ref={form} className="h-1/2 w-full my-2 lg:mx-0 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24">
             <span>Hey Paul,</span>
-            <textarea rows={6} className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            <input required type="text" className="bg-transparent border-b-2 border-b-black outline-none resize-none"
             name="user_message"
+            placeholder="Enter a message"
             />
             <span>My mail address is:</span>
             <input
             name="user_email"
-            type="text" className="bg-transparent border-b-2 border-b-black outline-none"/>
+            required
+            type="email" className="bg-transparent border-b-2 border-b-black outline-none"/>
             <span>Regards</span>
             <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">Send</button>
             {success && <span className="text-green-600 font-semibold">Message sent successfully!😊</span>}
