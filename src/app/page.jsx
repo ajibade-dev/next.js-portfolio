@@ -10,14 +10,14 @@ const Homepage = () => {
   <div className="h-full flex flex-col lg:flex-row-reverse px-4 sm:px-8 md:px-12 lg:px-20 xl:px-30">
  {/* Image Container */}
  <motion.div
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, amount: 0.5 }}
-  transition={{ duration: 0.3 }}
-  variants={{
-      hidden: { opacity: 0, x: 50 },
-      visible: {opacity: 1, y: 0 }
-  }}
+  // initial="hidden"
+  // whileInView="visible"
+  // viewport={{ once: true, amount: 0.5 }}
+  // transition={{ duration: 0.3 }}
+  // variants={{
+  //     hidden: { opacity: 0, x: 50 },
+  //     visible: {opacity: 1, y: 0 }
+  // }}
  className="w-full lg:w-1/2 relative h-1/2 lg:h-full">
  <Image src="/hero.png" alt="picture of a man" fill  className="object-contain" />
  </motion.div>
