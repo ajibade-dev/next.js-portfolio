@@ -99,7 +99,7 @@ const PortfolioPage = () => {
               />
             </defs>
             <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-xl">
+              <textPath xlinkHref="#circlePath" className="text-lg">
                 Front-end Developer and Project Manager
               </textPath>
             </text>

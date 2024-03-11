@@ -12,7 +12,6 @@ const text = "Say Hello to Paul"
 
   const form = useRef();
 
- 
 
   const sendEmail = (e) => {
     e.preventDefault();
