@@ -13,6 +13,11 @@ const links =[
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
+  const handleWhatsappClick = () => {
+    // Replace '1234567890' with your actual phone number
+    const phoneNumber = '08187977707';
+    window.open(`whatsapp://send?phone=${phoneNumber}`, '_blank');
+  };
 
   const topVariants ={
     closed:{
@@ -95,9 +100,9 @@ const centerVariants ={
           <Link href="https://www.linkedin.com/in/ajibade-paul/" target="_blank" rel="noopener noreferrer">
           <img src="/linkedin.png" alt="linkedin" width={24} height={24} />
           </Link>
-          <Link href="https://api.whatsapp.com/send?phone=08187977707" target="_blank" rel="noopener noreferrer">
-          <img src="/whatsapp.png" alt="whatsapp" width={32} height={32} />
-          </Link>
+          <div target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+          <img src="/whatsapp.png" alt="whatsapp" width={32} height={32} onClick={handleWhatsappClick} />
+          </div>
     </div>
 
       {/* menu for small screens */}
