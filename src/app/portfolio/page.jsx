@@ -84,7 +84,10 @@ const PortfolioPage = () => {
         </div>
       </div>
       <div className="w-screen h-[70vh] md:h-screen flex flex-col gap-16 items-center justify-center text-center overflow-hidden">
-        <h1 className="text-3xl md:text-4xl lg:text-8xl md:pt-10 xl:pt-20">Do you have a project?</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-8xl md:pt-10 xl:pt-40">Do you have a project?</h1>
+          {/* download cv button */}
+          <button className="px-3 py-3 animate-bounce bg-black hover:bg-white hover:text-black text-white border border-white rounded-xl transition-all">Download my CV</button>
+        
         <div className="relative">
           <motion.svg
             animate={{ rotate: 360 }}
@@ -109,7 +112,7 @@ const PortfolioPage = () => {
             className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
           >
             Hire Me
-          </Link>
+          </Link> 
         </div>
       </div>
     </motion.div>

@@ -87,7 +87,7 @@ const centerVariants ={
       </div>
 
     {/* the social icons */}
-    <div className="hidden md:flex gap-4">
+    <div className="flex gap-4">
           <Link href="https://github.com/ajibade-dev?tab=repositories" target="_blank" rel="noopener noreferrer">
           <img src="/github.png" alt="github" width={24} height={24} />
           </Link>
