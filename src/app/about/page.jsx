@@ -30,11 +30,11 @@ const AboutPage = () => {
             {/* biography title */}
           <h1 className="font-bold text-2xl">ABOUT ME</h1>
           {/* biography description */}
-          <p className="text-lg text-justify">I'm a dynamic professional skilled in both front-end engineering and project management. With expertise in HTML, CSS, JavaScript, and frameworks like React and Next.js, I specialize in crafting captivating user experiences and robust web applications.
+          <p className="text-lg text-justify">I am a dynamic professional skilled in both front-end engineering and project management. With expertise in HTML, CSS, JavaScript, and frameworks like React and Next.js, I specialize in crafting captivating user experiences and robust web applications.
 
 As a project manager, I excel in orchestrating teams and resources to deliver projects on time and within budget. Through effective communication and strategic planning, I ensure project milestones are met with precision, driving innovation and exceeding expectations.
 
-Combining technical proficiency with leadership acumen, I'm committed to delivering exceptional digital solutions that shape the future of web development.</p>
+Combining technical proficiency with leadership acumen, I am committed to delivering exceptional digital solutions that shape the future of web development.</p>
           {/* signature */}
             <div className="self-end">
             <svg width="160" height="100" viewBox="0 0 213 165" fill="none" xmlns="http://www.w3.org/2000/svg">
