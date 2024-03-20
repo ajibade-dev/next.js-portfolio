@@ -3,39 +3,43 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image";
 import Link from "next/link";
+import crypto from "../../../public/crypto.png"
+import three from "../../../public/3dweb.png"
+import flip from "../../../public/flip.png"
+import getlink from "../../../public/getlink.png"
 
 const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300",
-    title: "React Commerce",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    title: "Crypto Landing Page",
+    desc: "A simple landing crypto page for a budding crypto pproject showcasing essential features about the project. Built with React, Tailwindcss.",
+    img: crypto,
+    link: "https://decentalized-platform.vercel.app/",
   },
   {
     id: 2,
     color: "from-blue-300 to-violet-300",
-    title: "Next.js Medium Blog",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    title: "3D Portfolio Website",
+    desc: "A dynamic 3D portfolio website built with React.js, three.js, Tailwindcss. It delves the act of using vector and 3d images and complex animation",
+    img: three,
+    link: "https://react-3d-portfolio-website.vercel.app/",
   },
   {
     id: 3,
     color: "from-violet-300 to-purple-300",
-    title: "Vanilla Book App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    title: "Hackathon Project",
+    desc: "A two-page dynamic website for a competitve hackathin project, built with React.js, Tailwindcss, Framer motion ",
+    img: getlink,
+    link: "https://getlink-hackathon-chi.vercel.app/",
   },
   {
     id: 4,
     color: "from-purple-300 to-red-300",
-    title: "Spotify Music App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://lama.dev",
+    title: "Memory Game",
+    desc: "Amiple and fun game built with react.js that implements the use of states and stacking. ",
+    img: flip,
+    link: "https://react-memory-game-sigma.vercel.app/",
   },
 ];
 
@@ -68,13 +72,13 @@ const PortfolioPage = () => {
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl">
                     {item.title}
                   </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[450px] lg:h-[300px] xl:w-[500px] xl:h-[350px]">
+                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[450px] lg:h-[300px] xl:w-[450px] xl:h-[300px]">
                     <Image src={item.img} alt="" fill />
                   </div>
                   <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                     {item.desc}
                   </p>
-                  <Link href={item.link} className="flex justify-end">
+                  <Link href={item.link} target="_blank" rel="noopener noreferrer" className="flex justify-end">
                     <button className="p-2 text-sm md:p-4 md:text-md lg:text-lg bg-white text-gray-600 font-semibold rounded">See Demo</button>
                   </Link>
                 </div>
@@ -86,7 +90,7 @@ const PortfolioPage = () => {
       <div className="w-screen h-[70vh] md:h-screen flex flex-col gap-16 items-center justify-center text-center overflow-hidden">
         <h1 className="text-3xl md:text-4xl lg:text-8xl md:pt-10 xl:pt-40">Do you have a project?</h1>
           {/* download cv button */}
-          <button className="px-3 py-3 animate-bounce bg-black hover:bg-white hover:text-black text-white border border-white rounded-xl transition-all">Download my CV</button>
+          <button className="px-3 py-3 animate-bounce bg-black hover:bg-white hover:text-black hover:border-black hover:border-2 text-white border border-white rounded-xl transition-all">Download my CV</button>
         
         <div className="relative">
           <motion.svg
@@ -116,6 +120,6 @@ const PortfolioPage = () => {
         </div>
       </div>
     </motion.div>
-  );
+  );  
 };
 export default PortfolioPage

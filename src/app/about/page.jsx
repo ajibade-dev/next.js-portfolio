@@ -24,15 +24,17 @@ const AboutPage = () => {
       {/*main container */}
        <div className="h-full overflow-scroll lg:flex relative">
         {/* text container */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-40 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-40 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-2/3">
           {/* biography container */}
           <div className="flex flex-col gap-12 justify-center">
             {/* biography title */}
-          <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+          <h1 className="font-bold text-2xl">ABOUT ME</h1>
           {/* biography description */}
-          <p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perferendis dolor neque natus odio exercitationem voluptate laboriosam obcaecati doloremque in!</p>
-          {/* quote */}
-          <span className="italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, totam.</span>
+          <p className="text-lg text-justify">I'm a dynamic professional skilled in both front-end engineering and project management. With expertise in HTML, CSS, JavaScript, and frameworks like React and Next.js, I specialize in crafting captivating user experiences and robust web applications.
+
+As a project manager, I excel in orchestrating teams and resources to deliver projects on time and within budget. Through effective communication and strategic planning, I ensure project milestones are met with precision, driving innovation and exceeding expectations.
+
+Combining technical proficiency with leadership acumen, I'm committed to delivering exceptional digital solutions that shape the future of web development.</p>
           {/* signature */}
             <div className="self-end">
             <svg width="160" height="100" viewBox="0 0 213 165" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,13 +126,13 @@ const AboutPage = () => {
               {/* left */}
               <div className="w-1/3">
                 {/* job title */}
-                <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Senior Javascript Engineer</div>
+                <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Junior Project Manager</div>
                 {/* job description */}
-                <div className="p-3 text-sm italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, ipsam.</div> 
+              <div className="p-3 text-sm italic">Managed and collaborated a project for a start-up company </div> 
                 {/* job date */}
-                <div className="p-3 text-red-400 font-semibold text-sm">2010 - Present</div> 
+                <div className="p-3 text-red-400 font-semibold text-sm">2022 - Present</div> 
                 {/* company name */}
-                <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Apple</div> 
+                <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Taskimony</div> 
               </div>
               {/* center */}
               <div className="w-1/6 flex justify-center">
@@ -162,41 +164,16 @@ const AboutPage = () => {
               {/* right */}
               <div className="w-1/3">
                 {/* job title */}
-                <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Senior Javascript Engineer</div>
+                <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Front-end Developer</div>
                 {/* job description */}
-                <div className="p-3 text-sm italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, ipsam.</div> 
+                 <div className="p-3 text-sm italic">Designed a two-page project for in a competitve hackathon</div>  
                 {/* job date */}
-                <div className="p-3 text-red-400 font-semibold text-sm">2010 - Present</div> 
+                <div className="p-3 text-red-400 font-semibold text-sm">2023</div> 
                 {/* company name */}
-                <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Apple</div> 
+                <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Hackathon Project</div> 
               </div>
             </div>
 
-            {/* the third one */}
-            {/* experience list item */}
-            <div className="flex justify-between h-48">
-              {/* left */}
-              <div className="w-1/3">
-                {/* job title */}
-                <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Senior Javascript Engineer</div>
-                {/* job description */}
-                <div className="p-3 text-sm italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, ipsam.</div> 
-                {/* job date */}
-                <div className="p-3 text-red-400 font-semibold text-sm">2010 - Present</div> 
-                {/* company name */}
-                <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Apple</div> 
-              </div>
-              {/* center */}
-              <div className="w-1/6 flex justify-center">
-                {/* line */}
-                <div className="w-1 h-full bg-gray-600 relative">
-                  {/*line circle */}
-                  <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
-                </div>
-              </div>
-              {/* right */}
-              <div className="w-1/3"></div>
-            </div>
           </motion.div>
           </div>
         </div>

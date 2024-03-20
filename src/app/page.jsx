@@ -46,10 +46,11 @@ const Homepage = () => {
        hidden: { opacity: 0, y: -50 },
        visible: {opacity: 1, y: 0 }
    }} 
-  className="md:text-xltext-slate-800">Welcome to my digital canvas, where innovation and creativity converges. With a keen eye for aesthetics, and a mastery of code,my portfolio showcases a diverse collection of projects that refects my commitment to excellence.</motion.p>
+  className="md:text-xltext-slate-800 lg:leading-7 text-justify pr-0 lg:pr-20">Welcome to my digital canvas, where innovation and creativity converges. With a keen eye for aesthetics, and a mastery of code, my portfolio showcases a diverse collection of projects that refects my commitment to excellence.</motion.p>
   {/* buttons */}
   <div className="w-full flex gap-4 py-4 sm:justify-center md:justify-normal">
-    <Link href="/portfolio"><motion.button
+    <Link href="/portfolio">
+      <motion.button
      initial="hidden"
      whileInView="visible"
      viewport={{ once: true, amount: 0.5 }}
@@ -58,7 +59,7 @@ const Homepage = () => {
          hidden: { opacity: 0, y: 50 },
          visible: {opacity: 1, y: 0 }
      }}
-     className="rounded-lg p-4 ring-1 ring-slate-700 bg-slate-700 text-white">View my work</motion.button></Link>
+     className="rounded-lg p-4 ring-1 ring-slate-700 bg-slate-700 text-white hover:text-slate-700 hover:bg-transparent">View my work</motion.button></Link>
     <Link href="/contact"><motion.button
      initial="hidden"
      whileInView="visible"
@@ -68,7 +69,7 @@ const Homepage = () => {
          hidden: { opacity: 0, y: 50 },
          visible: {opacity: 1, y: 0 }
      }}
-     className="rounded-lg p-4 ring-1 ring-slate-700 text-slate-700">Contact Me</motion.button>
+     className="rounded-lg p-4 ring-1 ring-slate-700 text-slate-700 hover:text-white hover:bg-slate-700">Contact Me</motion.button>
      </Link>
     
   </div>
