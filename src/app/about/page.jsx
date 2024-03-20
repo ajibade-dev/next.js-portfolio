@@ -2,7 +2,7 @@
 import { motion, useScroll, useInView } from "framer-motion"
 import Brain from "../../components/Brain"
 import { useRef } from "react"
-import { transcode } from "buffer"
+
 
 
 const AboutPage = () => {
