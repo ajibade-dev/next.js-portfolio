@@ -90,7 +90,7 @@ const PortfolioPage = () => {
       <div className="w-screen h-[70vh] md:h-screen flex flex-col gap-16 items-center justify-center text-center overflow-hidden">
         <h1 className="text-3xl md:text-4xl lg:text-8xl md:pt-10 xl:pt-40">Do you have a project?</h1>
           {/* download cv button */}
-         <a href="/front-end.pdf" download="front-end.pdf" className="px-3 py-3 bg-black hover:bg-white hover:text-black hover:border-black hover:border-2 text-white border border-white rounded-xl">Download my Resume</a> 
+         <Link href="/front-end.pdf" download="front-end.pdf" target="_blank" rel="noopener noreferrer"><a href="/front-end.pdf" download="front-end.pdf" className="px-3 py-3 bg-black hover:bg-white hover:text-black hover:border-black hover:border-2 text-white border border-white rounded-xl">Download my Resume</a> </Link>
         
         <div className="relative">
           <motion.svg
