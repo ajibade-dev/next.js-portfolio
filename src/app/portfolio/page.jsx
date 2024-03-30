@@ -91,7 +91,7 @@ const PortfolioPage = () => {
         <h1 className="text-3xl md:text-4xl lg:text-8xl md:pt-10 xl:pt-40">Do you have a project?</h1>
           {/* download cv button */}
           <div className="relative">
-          <Link href="/front-end.pdf" download="front-end.pdf" target="_blank" rel="noopener noreferrer" className="z-20"><button href="/front-end.pdf" className="px-3 py-3 bg-black text-white border border-white rounded-xl">Download my Resume</button></Link>
+          <Link href="/front-end.pdf" download="front-end.pdf" target="_blank" rel="noopener noreferrer" className="z-20"><button href="/front-end.pdf" className="px-3 py-3 bg-black text-white border border-white rounded-xl animate-bounce hover:bg-white hover:text-black hover:border-black">Download my Resume</button></Link>
           </div>
          
         
