@@ -37,7 +37,7 @@ const items = [
     id: 4,
     color: "from-purple-300 to-red-300",
     title: "Memory Game",
-    desc: "Amiple and fun game built with react.js that implements the use of states and stacking. ",
+    desc: "A simple and fun game built with react.js that implements the use of states and stacking. ",
     img: flip,
     link: "https://react-memory-game-sigma.vercel.app/",
   },
