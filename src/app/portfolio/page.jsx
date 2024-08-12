@@ -4,7 +4,7 @@ import { useRef } from "react"
 import Image from "next/image";
 import Link from "next/link";
 import crypto from "../../../public/crypto.png"
-import three from "../../../public/3dweb.png"
+import three from "../../../public/space-pic.png"
 import flip from "../../../public/flip.png"
 import getlink from "../../../public/getlink.png"
 
@@ -12,26 +12,29 @@ const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300",
-    title: "Crypto Landing Page",
-    desc: "A simple landing crypto page for a budding crypto pproject showcasing essential features about the project. Built with React, Tailwindcss.",
+    title: "IP Tracking website",
+    desc: "A fully functional IP tracking website with a comprehensive map layout, giving accurate location of where the inputted IP is loacted.",
     img: crypto,
-    link: "https://decentalized-platform.vercel.app/",
+    git: "https://github.com/ajibade-dev/ip-tracker",
+    link: "https://ip-tracker-gules-nine.vercel.app/",
   },
   {
     id: 2,
     color: "from-blue-300 to-violet-300",
-    title: "3D Portfolio Website",
-    desc: "A dynamic 3D portfolio website built with React.js, three.js, Tailwindcss. It delves the act of using vector and 3d images and complex animation",
+    title: "Space Website",
+    desc: "This is an animated space website with information on different space planets, different working professionals and much more...",
     img: three,
-    link: "https://react-3d-portfolio-website.vercel.app/",
+    git:"https://github.com/ajibade-dev/space-website",
+    link: "https://space-website-up6j.vercel.app/",
   },
   {
     id: 3,
     color: "from-violet-300 to-purple-300",
-    title: "Hackathon Project",
-    desc: "A two-page dynamic website for a competitve hackathin project, built with React.js, Tailwindcss, Framer motion ",
+    title: "Ecommerce Modal",
+    desc: "A simple functional ecommerce modal that integrates the add-to-cart functionality.",
     img: getlink,
-    link: "https://getlink-hackathon-chi.vercel.app/",
+    git: "https://github.com/ajibade-dev/ecommerce-modal",
+    link: "https://ecommerce-modal.vercel.app/",
   },
   {
     id: 4,
@@ -39,6 +42,7 @@ const items = [
     title: "Memory Game",
     desc: "A simple and fun game built with react.js that implements the use of states and stacking. ",
     img: flip,
+    git: "https://github.com/ajibade-dev/ecommerce-modal",
     link: "https://react-memory-game-sigma.vercel.app/",
   },
 ];
@@ -57,8 +61,8 @@ const PortfolioPage = () => {
       transition={{ duration: 1 }}
     >
       <div className="h-[450vh] relative" ref={ref}>
-        <div className="w-screen h-[80vh] md:h-[100vh] flex items-center justify-center text-4xl md:text-6xl lg:text-8xl text-center">
-          My Works
+        <div className="w-screen h-[80vh] md:h-[100vh] flex items-center justify-center text-4xl md:text-6xl lg:text-8xl text-center font-merriweather">
+          MY WORKS
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
@@ -68,19 +72,28 @@ const PortfolioPage = () => {
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
-                <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl">
+                <div className="flex flex-col gap-4 text-white max-w-[600px] bg-slate-600 rounded-lg items-center justify-center lg:py-6 py-3 px-3 lg:px-0">
+                  <h1 className="text-xl font-bold md:text-4xl">
                     {item.title}
                   </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[450px] lg:h-[300px] xl:w-[450px] xl:h-[300px]">
-                    <Image src={item.img} alt="" fill />
+                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[450px] lg:h-[450px] xl:w-[450px] xl:h-[300px]">
+                  <Image src={item.img} alt="" 
+                    layout="fill"
+                    objectFit="contain"
+                    className=""
+                    />
                   </div>
-                  <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+                  <p className="w-80  lg:w-3/4">
                     {item.desc}
                   </p>
-                  <Link href={item.link} target="_blank" rel="noopener noreferrer" className="flex justify-end">
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:text-lg bg-white text-gray-600 font-semibold rounded">See Demo</button>
+                  <div className="flex flex-row items-center justify-between w-full px-10">
+                  <Link href={item.git} target="_blank" rel="noopener noreferrer" className="flex justify-end">
+                    <button className="p-2 text-sm md:p-4 md:text-md lg:text-lg bg-white border-2 border-black text-gray-600 font-semibold rounded-lg">Github</button>
                   </Link>
+                  <Link href={item.link} target="_blank" rel="noopener noreferrer" className="flex justify-end">
+                    <button className="p-2 text-sm md:p-4 md:text-md lg:text-lg bg-white border-2 border-black  text-gray-600 font-semibold rounded-lg">Live Site</button>
+                  </Link>
+                  </div>
                 </div>
               </div>
             ))}
@@ -88,10 +101,10 @@ const PortfolioPage = () => {
         </div>
       </div>
       <div className="w-screen h-[70vh] md:h-screen flex flex-col gap-16 items-center justify-center text-center overflow-hidden">
-        <h1 className="text-3xl md:text-4xl lg:text-8xl md:pt-10 xl:pt-40">Do you have a project?</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-8xl md:pt-10 xl:pt-40 font-merriweather">Do you have a project?</h1>
           {/* download cv button */}
           <div className="relative">
-          <Link href="/front-end.pdf" download="front-end.pdf" target="_blank" rel="noopener noreferrer" className="z-20"><button href="/front-end.pdf" className="px-3 py-3 bg-black text-white border border-white rounded-xl animate-bounce hover:bg-white hover:text-black hover:border-black">Download my Resume</button></Link>
+          <Link href="/front-end.pdf" download="front-end.pdf" target="_blank" rel="noopener noreferrer" className="z-20"><button href="/front-end.pdf" className="px-3 py-3 bg-black text-white border border-white rounded-xl animate-bounce hover:bg-white hover:text-black hover:border-black font-montserrat">Download my Resume</button></Link>
           </div>
          
         
@@ -109,14 +122,14 @@ const PortfolioPage = () => {
               />
             </defs>
             <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-lg">
+              <textPath xlinkHref="#circlePath" className="text-lg ">
                 Front-end Developer and Project Manager
               </textPath>
             </text>
           </motion.svg>
           <Link
             href="/contact"
-            className="w-20 h-20 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center text-sm lg:text-lg"
+            className="w-20 h-20 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center text-sm lg:text-lg font-montserrat"
           >
             Hire Me
           </Link> 

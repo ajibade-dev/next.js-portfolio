@@ -46,7 +46,7 @@ const text = "Say Hello to Paul"
         {/* text container */}
         <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-3xl">
           {/* animated text */}
-          <div className="">
+          <div className="font-raleway">
           {text.split("").map((letter, index) => (
             <motion.span key={index} initial={{opacity: 1}} animate={{opacity:0}} transition={{duration:3, repeat:Infinity, delay:index * 0.1,}}>
                 {letter}
@@ -59,21 +59,21 @@ const text = "Say Hello to Paul"
         <form
         onSubmit={sendEmail}
         ref={form} className="h-1/2 w-full my-2 lg:mx-0 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-8 lg:p-24 ">
-            <span className="">Hey Paul,</span>
+            <span className="font-montserrat">Hey Paul,</span>
             <input required type="text" className="bg-transparent border-b-2 border-b-black outline-none"
             name="user_message"
             placeholder="Enter a message"
             />
-            <span>My mail address is:</span>
+            <span className="font-montserrat">My mail address is:</span>
             <input
             name="user_email"
             required
             type="email" className="bg-transparent border-b-2 border-b-black outline-none"/>
-            <span>Regards</span>
-            <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">Send</button>
+            <span className="font-montserrat">Regards</span>
+            <button className="bg-purple-200 font-montserrat rounded font-semibold text-gray-600 p-4">Send</button>
             <div className="-mt-7">
-            {success && <span className="text-green-600 font-semibold">Message sent successfully!😊</span>}
-            {error && <span className="text-red-600 font-semibold">Something went wrong. Try again!</span>}
+            {success && <span className="text-green-600 font-semibold font-montserrat">Message sent successfully!😊</span>}
+            {error && <span className="text-red-600 font-semibold font-montserrat">Something went wrong. Try again!</span>}
             </div>
             
         </form>

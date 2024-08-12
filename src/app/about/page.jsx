@@ -28,9 +28,9 @@ const AboutPage = () => {
           {/* biography container */}
           <div className="flex flex-col gap-12 justify-center">
             {/* biography title */}
-          <h1 className="font-bold text-2xl">ABOUT ME</h1>
+          <h1 className="font-bold text-2xl font-merriweather tracking-wider">ABOUT ME</h1>
           {/* biography description */}
-          <p className="text-lg text-justify">I am a dynamic professional skilled in both front-end engineering and project management. With expertise in HTML, CSS, JavaScript, and frameworks like React and Next.js, I specialize in crafting captivating user experiences and robust web applications.
+          <p className="text-lg text-justify font-montserrat">I am a dynamic professional skilled in both front-end engineering and project management. With expertise in HTML, CSS, JavaScript, and frameworks like React and Next.js, I specialize in crafting captivating user experiences and robust web applications.
 
 As a project manager, I excel in orchestrating teams and resources to deliver projects on time and within budget. Through effective communication and strategic planning, I ensure project milestones are met with precision, driving innovation and exceeding expectations.
 
@@ -74,10 +74,10 @@ Combining technical proficiency with leadership acumen, I am committed to delive
           {/* skills container */}
           <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
             {/* skill title */}
-          <motion.h1 initial={{x:"-300px"}} animate={isSkillRefInView ? {x:0} : {}} transition={{ delay: 0.4}} className="font-bold text-2xl">SKILLS</motion.h1>
+          <motion.h1 initial={{x:"-300px"}} animate={isSkillRefInView ? {x:0} : {}} transition={{ delay: 0.4}} className="font-bold text-2xl font-merriweather tracking-wider">SKILLS</motion.h1>
 
           {/* skill list */}
-          <motion.div initial={{x:"-300px"}} animate={isSkillRefInView ? {x:0} : {}} transition={{ delay: 0.2}} className="flex gap-4 flex-wrap">
+          <motion.div initial={{x:"-300px"}} animate={isSkillRefInView ? {x:0} : {}} transition={{ delay: 0.2}} className="flex gap-4 flex-wrap font-montserrat">
             <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Javascript</div>
             <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Typescript</div>
             <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Tailwind CSS</div>
@@ -114,7 +114,7 @@ Combining technical proficiency with leadership acumen, I am committed to delive
           {/* experience container */}
           <div className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
             {/* experience title */}
-          <motion.h1 initial={{x: "-300px"}} animate={isExperienceRefInView ? {x:'0'} : {}} transition={{delay: 0.2}} className="font-bold text-2xl">EXPERIENCE</motion.h1>
+          <motion.h1 initial={{x: "-300px"}} animate={isExperienceRefInView ? {x:'0'} : {}} transition={{delay: 0.2}} className="font-bold text-2xl font-merriweather tracking-wider">EXPERIENCE</motion.h1>
           {/* experience list */}
           <motion.div
           initial={{x: "-300px"}} animate={isExperienceRefInView ? {x:'0'} : {}} transition={{delay: 0.2}}
@@ -128,9 +128,9 @@ Combining technical proficiency with leadership acumen, I am committed to delive
                 {/* job title */}
                 <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Junior Project Manager</div>
                 {/* job description */}
-              <div className="p-3 text-sm italic">Managed and collaborated a project for a start-up company </div> 
+              <div className="p-3 text-sm font-montserrat">Managed and collaborated a project for a start-up company </div> 
                 {/* job date */}
-                <div className="p-3 text-red-400 font-semibold text-sm">2022 - Present</div> 
+                <div className="p-3 text-red-400 font-semibold text-sm font-montserrat">2022 - Present</div> 
                 {/* company name */}
                 <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Taskimony</div> 
               </div>
@@ -166,9 +166,9 @@ Combining technical proficiency with leadership acumen, I am committed to delive
                 {/* job title */}
                 <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Front-end Developer</div>
                 {/* job description */}
-                 <div className="p-3 text-sm italic">Designed a two-page project for in a competitve hackathon</div>  
+                 <div className="p-3 text-sm font-montserrat">Designed a pixel-perfect two-page animated website in a competitve hackathon</div>  
                 {/* job date */}
-                <div className="p-3 text-red-400 font-semibold text-sm">2023</div> 
+                <div className="p-3 text-red-400 font-semibold text-sm font-montserrat">2023</div> 
                 {/* company name */}
                 <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Hackathon Project</div> 
               </div>
