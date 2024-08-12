@@ -3,10 +3,10 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image";
 import Link from "next/link";
-import crypto from "../../../public/crypto.png"
+import ip from "../../../public/ip.png"
 import three from "../../../public/space-pic.png"
 import flip from "../../../public/flip.png"
-import getlink from "../../../public/getlink.png"
+import ecom from "../../../public/ecom pic.png"
 
 const items = [
   {
@@ -14,7 +14,7 @@ const items = [
     color: "from-red-300 to-blue-300",
     title: "IP Tracking website",
     desc: "A fully functional IP tracking website with a comprehensive map layout, giving accurate location of where the inputted IP is loacted.",
-    img: crypto,
+    img: ip,
     git: "https://github.com/ajibade-dev/ip-tracker",
     link: "https://ip-tracker-gules-nine.vercel.app/",
   },
@@ -32,7 +32,7 @@ const items = [
     color: "from-violet-300 to-purple-300",
     title: "Ecommerce Modal",
     desc: "A simple functional ecommerce modal that integrates the add-to-cart functionality.",
-    img: getlink,
+    img: ecom,
     git: "https://github.com/ajibade-dev/ecommerce-modal",
     link: "https://ecommerce-modal.vercel.app/",
   },
@@ -73,24 +73,24 @@ const PortfolioPage = () => {
                 key={item.id}
               >
                 <div className="flex flex-col gap-4 text-white max-w-[600px] bg-slate-600 rounded-lg items-center justify-center lg:py-6 py-3 px-3 lg:px-0">
-                  <h1 className="text-xl font-bold md:text-4xl">
+                  <h1 className="text-xl font-bold md:text-4xl font-montserrat">
                     {item.title}
                   </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[450px] lg:h-[450px] xl:w-[450px] xl:h-[300px]">
+                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[450px] rounded-lg lg:h-[450px] xl:w-[450px] xl:h-[300px]">
                   <Image src={item.img} alt="" 
                     layout="fill"
                     objectFit="contain"
                     className=""
                     />
                   </div>
-                  <p className="w-80  lg:w-3/4">
+                  <p className="w-80  lg:w-3/4 font-montserrat">
                     {item.desc}
                   </p>
                   <div className="flex flex-row items-center justify-between w-full px-10">
-                  <Link href={item.git} target="_blank" rel="noopener noreferrer" className="flex justify-end">
+                  <Link href={item.git} target="_blank" rel="noopener noreferrer" className=" font-montserrat flex justify-end">
                     <button className="p-2 text-sm md:p-4 md:text-md lg:text-lg bg-white border-2 border-black text-gray-600 font-semibold rounded-lg">Github</button>
                   </Link>
-                  <Link href={item.link} target="_blank" rel="noopener noreferrer" className="flex justify-end">
+                  <Link href={item.link} target="_blank" rel="noopener noreferrer" className="flex font-montserrat justify-end">
                     <button className="p-2 text-sm md:p-4 md:text-md lg:text-lg bg-white border-2 border-black  text-gray-600 font-semibold rounded-lg">Live Site</button>
                   </Link>
                   </div>
