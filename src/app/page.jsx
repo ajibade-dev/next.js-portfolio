@@ -7,7 +7,7 @@ const Homepage = () => {
   return ( 
     <motion.div className="h-screen" initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}}>
     
-  <div className="h-full flex flex-col lg:flex-row-reverse px-4 sm:px-8 md:px-12 lg:px-20 xl:px-30">
+  <div className="h-full flex flex-col lg:flex-row-reverse px-4 sm:px-8 md:px-12 lg:px-20 xl:px-30 max-w-[1600px] mx-auto">
  {/* Image Container */}
  <motion.div
   // initial="hidden"

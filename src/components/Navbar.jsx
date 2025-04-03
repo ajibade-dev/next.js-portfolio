@@ -73,7 +73,7 @@ const centerVariants ={
   }
 
   return (
-    <div className="h-full font-montserrat items-center justify-between flex px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 text-base">
+    <div className="h-full font-montserrat items-center justify-between flex px-4 sm:px-8 md:px-12 lg:px-20 text-base max-w-[1600px] mx-auto mb-40">
       
       {/* logo */}
       <div className="">

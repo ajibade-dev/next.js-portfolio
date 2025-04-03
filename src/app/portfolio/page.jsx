@@ -60,11 +60,11 @@ const PortfolioPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-[450vh] relative" ref={ref}>
+      <div className="h-[800vh] relative" ref={ref}>
         <div className="w-screen h-[80vh] md:h-[100vh] flex items-center justify-center text-4xl md:text-6xl lg:text-8xl text-center font-merriweather">
           MY WORKS
         </div>
-        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
+        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden lg:px-24 px-0">
           <motion.div style={{ x }} className="flex">
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
             {items.map((item) => (
@@ -100,8 +100,8 @@ const PortfolioPage = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-[70vh] md:h-screen flex flex-col gap-16 items-center justify-center text-center overflow-hidden">
-        <h1 className="text-3xl md:text-4xl lg:text-8xl md:pt-10 xl:pt-40 font-merriweather">Do you have a project?</h1>
+      <div className="w-screen flex flex-col gap-12 items-center justify-center text-center overflow-hidden">
+        <h1 className="text-3xl md:text-4xl lg:text-8xl md:mt-10 lg:mt-12 mt-6 font-merriweather">Do you have a project?</h1>
           {/* download cv button */}
           <div className="relative">
           <Link href="/front-end.pdf" download="front-end.pdf" target="_blank" rel="noopener noreferrer" className="z-20"><button href="/front-end.pdf" className="px-3 py-3 bg-black text-white border border-white rounded-xl animate-bounce hover:bg-white hover:text-black hover:border-black font-montserrat">Download my Resume</button></Link>

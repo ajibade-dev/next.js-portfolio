@@ -41,10 +41,10 @@ const text = "Say Hello to Paul"
   };
 
   return (
-    <motion.div className="h-screen" initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}}>
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40">
+    <motion.div className="h-screen mx-auto flex flex-col justify-center w-full" initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}}>
+      <div className="flex flex-col items-center justify-center lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40">
         {/* text container */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-3xl">
+        <div className="md:h-1/2 h-full w-full lg:h-full lg:w-1/2 flex items-center justify-center text-3xl mb-20 md:mb-20 lg:mb-0">
           {/* animated text */}
           <div className="font-raleway">
           {text.split("").map((letter, index) => (
@@ -58,7 +58,7 @@ const text = "Say Hello to Paul"
         {/* form container */}
         <form
         onSubmit={sendEmail}
-        ref={form} className="h-1/2 w-full my-2 lg:mx-0 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-8 lg:p-24 ">
+        ref={form} className=" w-full my-2 h-auto lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-8 lg:p-24 ">
             <span className="font-montserrat">Hey Paul,</span>
             <input required type="text" className="bg-transparent border-b-2 border-b-black outline-none"
             name="user_message"
