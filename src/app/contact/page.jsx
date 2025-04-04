@@ -41,7 +41,7 @@ const text = "Say Hello to Paul"
   };
 
   return (
-    <motion.div className="h-screen mx-auto flex flex-col justify-center w-full" initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}}>
+    <motion.div className="h-screen mx-auto max-w-[1600px] flex flex-col justify-center w-full" initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}}>
       <div className="flex flex-col items-center justify-center lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40">
         {/* text container */}
         <div className="md:h-1/2 h-full w-full lg:h-full lg:w-1/2 flex items-center justify-center text-3xl mb-20 md:mb-20 lg:mb-0">
